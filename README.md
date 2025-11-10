@@ -27,14 +27,6 @@ This was built as part of the **Backend Developer Internship Assignment**.
 
 
 
-
-
-
-
-
-
-
-
 ### Job Lifecycle
 
 | State | Meaning |
@@ -47,14 +39,14 @@ This was built as part of the **Backend Developer Internship Assignment**.
 
 ---
 
-## 📦 Installation (Google Colab Compatible)
+##  Installation (Google Colab Compatible)
 
 ```bash
 cd queuectl/
 pip install -e .
 
-
-**💾 Data Persistence**
+**
+## Data Persistence**
 
 All job metadata is stored in SQLite (queue.db)
 
@@ -64,7 +56,7 @@ Jobs persist across notebook restarts or system reboot
 
 
 **
-⚙ Assumptions & Trade-offs**
+### Assumptions & Trade-offs**
 Area: Decision
 Storage: SQLite chosen for simplicity and durability
 Concurrency: BEGIN IMMEDIATE ensures only one worker claims a job
@@ -72,8 +64,8 @@ Scheduling: Retry delays handled via due_at timestamps
 Logging: Simple output/error stored in last_error for failed jobs
 
 
-**🏁 Conclusion
-**
+##Conclusion
+
 This implementation provides a clean, durable, concurrency-safe background job queue system with:
 
 Multiple workers
